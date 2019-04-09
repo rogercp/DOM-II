@@ -25,11 +25,20 @@ nava.addEventListener("click",function(e){
 
 //2
 //click
+
+
 let logo=document.querySelector("h1");
 logo.addEventListener("click",function(e){
     e.target.textContent="Vrrroooommm!";
     e.stopPropagation();
 });
+
+
+let section1=document.querySelector(".content-section h2");
+section1.addEventListener("click",function(e){
+    e.target.textContent="HEllO!!";
+    e.stopPropagation();
+})
 
 let pic1=document.querySelector(".content-section img");
 pic1.addEventListener("click",function(e){
