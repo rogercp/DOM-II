@@ -28,7 +28,7 @@ nava.addEventListener("click",function(e){
 let logo=document.querySelector("h1");
 logo.addEventListener("click",function(e){
     e.target.textContent="Vrrroooommm!";
-    e.stopPropagation();
+   
 });
 
 let pic1=document.querySelector(".content-section img");
@@ -43,6 +43,7 @@ pic1.addEventListener("click",function(e){
 let pic2=document.querySelector(".inverse-content img")
 pic2.addEventListener("dblclick",function(e){
     e.target.src="img/adventure.jpg";
+    e.stopPropagation();
 });
 
 
@@ -84,6 +85,7 @@ load.appendChild(txt1);
 
 //8
 ///select
+////does not work I think i am close though//
 
 let newp=document.createElement("p");
 newp.id="new1";
@@ -109,11 +111,13 @@ console.log('The window has been resized');
  }, 100);
  
  //10
+ ///mouseenter
 let variable1=document.querySelector(".btn");
  variable1.addEventListener("mouseenter", function(e) {
     e.target.style.background="red";
 });
 //11
+//mouseleave
 let variable2=document.querySelector(".btn");
  variable2.addEventListener("mouseleave", function(e) {
     e.target.style.background="#17A2B8";
