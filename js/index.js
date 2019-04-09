@@ -57,8 +57,8 @@ forms.addEventListener("focus",(event)=>{
 //5
 window.addEventListener("keyup",keyPressUp,false);
 function keyPressUp(key){
-    if(key.keyCode=="69"){
-        alert("You pressed enter");
+    if(key.keyCode=="69"){//e
+        alert("jump back on the fun bus");
     }
 }
 
@@ -67,7 +67,7 @@ function keyPressUp(key){
 //keydown
 window.addEventListener("keydown",keyPress,false);
 function keyPress(key){
-    if(key.keyCode=="80"){
+    if(key.keyCode=="80"){//p
         alert("Jump back on the fun bus");
     }
 }
@@ -85,21 +85,21 @@ load.appendChild(txt1);
 //8
 ///select
 
-// let newp=document.createElement("p");
-// newp.id="new1";
-// newp.textContent="hello";
+let newp=document.createElement("p");
+newp.id="new1";
+newp.textContent="hello";
 
-// let appender=document.querySelector(".intro p");
-// appender.appendChild(newp);
+let appender=document.querySelector(".intro p");
+appender.appendChild(newp);
 
-// function logSelection(e){
-//     let log=document.getElementById('new1');
-//     let selection=e.target.value.substring(e.target.selectionStart, e.target.selectionEnd);
-//     log.textContent=`You selected: ${selection}`;
-// }
+function logSelection(e){
+    let log=document.getElementById('newp');
+    let selection=e.target.value.substring(e.target.selectionStart, e.target.selectionEnd);
+    log.textContent=`You selected: ${selection}`;
+}
 
-// let input = document.querySelector('#slct1')
-// input.addEventListener("onChange",logSelection);
+let input = document.querySelector('#slct1')
+input.addEventListener("select",logSelection);
 
 
 //9
@@ -107,4 +107,14 @@ load.appendChild(txt1);
 window.addEventListener('resize', function(e) {
 console.log('The window has been resized');
  }, 100);
-
+ 
+ //10
+let variable1=document.querySelector(".btn");
+ variable1.addEventListener("mouseenter", function(e) {
+    e.target.style.background="red";
+});
+//11
+let variable2=document.querySelector(".btn");
+ variable2.addEventListener("mouseleave", function(e) {
+    e.target.style.background="#17A2B8";
+});
