@@ -28,7 +28,7 @@ nava.addEventListener("click",function(e){
 let logo=document.querySelector("h1");
 logo.addEventListener("click",function(e){
     e.target.textContent="Vrrroooommm!";
-   
+    e.stopPropagation();
 });
 
 let pic1=document.querySelector(".content-section img");
@@ -43,7 +43,7 @@ pic1.addEventListener("click",function(e){
 let pic2=document.querySelector(".inverse-content img")
 pic2.addEventListener("dblclick",function(e){
     e.target.src="img/adventure.jpg";
-    e.stopPropagation();
+    
 });
 
 
